@@ -41,3 +41,83 @@ todo-list-app/
 ├── style.css           # CSS სტილები
 ├── script.js           # JavaScript ლოგიკა
 └── README.md           # დოკუმენტაცია# Final-Project-Front
+
+## 🛠️ ტექნოლოგიები
+
+### **HTML5**
+- სემანტიკური ტეგები (`<header>`, `<nav>`, `<footer>`, `<form>`)
+- Meta tags (SEO & Open Graph)
+- Accessibility (aria-label)
+
+### **CSS3**
+- **CSS Variables** - თემებისთვის
+- **Flexbox & Grid** - layout-ისთვის
+- **Media Queries** - Responsive Design
+- **Animations** - @keyframes, transitions
+- **Google Fonts** - Poppins
+- **Font Awesome** - Icons
+
+### **JavaScript ES6+**
+- **Classes (OOP)** - Task კლასი getters/setters-ით
+- **Arrow Functions** - თანამედროვე სინტაქსი
+- **Array Methods** - map, filter, find, forEach
+- **Spread Operator** - მონაცემების კოპირება
+- **Destructuring** - ობიექტების/მასივების დაშლა
+- **Template Literals** - დინამიკური HTML
+- **LocalStorage API** - მონაცემების შენახვა
+- **DOM Manipulation** - querySelector, createElement
+- **Event Handling** - addEventListener
+- **Async/Await** - Promise-ების მართვა
+- **Regex Validation** - ფორმის ვალიდაცია
+
+---
+
+## 📚 კოდის სტრუქტურა
+
+### **Task კლასი (OOP)**
+```javascript
+class Task {
+    constructor(title) {
+        this.id = Date.now().toString();
+        this.title = title;
+        this.completed = false;
+    }
+    
+    get displayTitle() {
+        return this.title.charAt(0).toUpperCase() + this.title.slice(1);
+    }
+    
+    toggle() {
+        this.completed = !this.completed;
+    }
+}
+```
+
+### **LocalStorage**
+```javascript
+// შენახვა
+localStorage.setItem('tasks', JSON.stringify(tasks));
+
+// წაკითხვა
+const stored = localStorage.getItem('tasks');
+tasks = JSON.parse(stored);
+```
+
+### **Regex Validation**
+```javascript
+const regex = /^[a-zA-Z0-9ა-ჰ\s]{3,}$/;
+if (!regex.test(title)) {
+    alert('არასწორი ფორმატი!');
+}
+```
+
+---
+
+## 🎨 დიზაინის მახასიათებლები
+
+- **Color Scheme**: Indigo (#6366f1) primary color
+- **Typography**: Poppins font family
+- **Layout**: Centered container (max-width: 800px)
+- **Shadows**: Soft elevation for depth
+- **Border Radius**: 10-15px for modern look
+- **Transitions**: 0.3s ease for smooth interactions
