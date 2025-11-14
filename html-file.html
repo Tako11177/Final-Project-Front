@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="მარტივი და ელეგანტური To-Do List აპლიკაცია დავალებების მართვისთვის">
+    <meta property="og:title" content="My To-Do List App">
+    <meta property="og:description" content="ორგანიზებული იყავი - მართე შენი დავალებები ეფექტურად">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200">
+    <title>My To-Do List App</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css-file.css">
+    <script src="js-file.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-check-circle"></i>
+                TodoApp
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>My To-Do List App</h1>
+        <p class="subtitle"><strong>ორგანიზებული იყავი</strong> და მიაღწიე <em>შენს მიზნებს</em></p>
+
+        <!-- Quote Slider -->
+        <div class="quote-slider">
+            <div class="quote-content" id="quoteContent">
+                <p class="quote-text">"წარმატება არის მცირე ძალისხმევების ჯამი, რომელიც ყოველდღე მეორდება."</p>
+                <p class="quote-author">— Robert Collier</p>
+            </div>
+        </div>
+
+        <!-- Main Card -->
+        <div class="card">
+            <!-- Add Task Form -->
+            <form id="taskForm">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="დაამატე ახალი დავალება..." 
+                    autocomplete="off"
+                >
+                <button type="submit">
+                    <i class="fas fa-plus"></i>
+                    დამატება
+                </button>
+            </form>
+
+            <!-- Search and Filter Controls -->
+            <div class="controls">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-box" 
+                    placeholder="🔍 ძებნა დავალებებში..."
+                    autocomplete="off"
+                >
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">ყველა</button>
+                    <button class="filter-btn" data-filter="active">აქტიური</button>
+                    <button class="filter-btn" data-filter="completed">დასრულებული</button>
+                </div>
+                <button class="clear-all" id="clearAll">
+                    <i class="fas fa-trash"></i>
+                    წაშლა
+                </button>
+            </div>
+
+            <!-- Tasks Header -->
+            <div class="tasks-header">
+                <h3>დავალებები</h3>
+                <span class="task-count" id="taskCount">0 დავალება</span>
+            </div>
+
+            <!-- Task List -->
+            <ul id="taskList">
+                <div class="empty-state">
+                    <i class="fas fa-clipboard-check"></i>
+                    <p>დავალებები არ არის. დაამატე პირველი!</p>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>შექმნილია ❤️-ით | <a href="mailto:your.email@example.com">დამიკავშირდი</a></p>
+        <p><small>© 2025 To-Do List App. All rights reserved.</small></p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
